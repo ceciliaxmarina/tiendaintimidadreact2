@@ -29,7 +29,7 @@ h1, h2, h3, h4 {
 }
 
 /* Contenedor principal */
-.container {
+.mi-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
@@ -340,4 +340,30 @@ small, .caption {
 .tienda-footer-highlight {
   font-weight: 600;
   color: #fbcfe8; /* rosa claro suave, visible sobre fondo oscuro */
+} 
+
+@media (max-width: 768px) {
+  .tienda-header-nav {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    /* Fondo y posición */
+    position: absolute;
+    top: 100%; /* justo debajo del header */
+    right: 0;
+    width: 200px; /* o el que quieras */
+    background-color: rgba(255, 255, 255, 0.95); /* fondo blanco semitransparente */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .tienda-header-nav.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }

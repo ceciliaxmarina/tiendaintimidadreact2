@@ -11,7 +11,6 @@ import SignIn from './components/SignIn';
 import Login from './components/LogIn';
 import { AppProvider } from './context/AppContext';
 import ProtectedRoute from './components/ProtectedRoute';
-// 👇 Agregá esta línea:
 import AgregarProducto from './components/AgregarProducto';
 
 function App() {

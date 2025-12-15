@@ -6,7 +6,7 @@ const Spinner = () => {
             <div className="flex flex-col items-center">
                 {/* Spinner personalizado */}
                 <div className="w-16 h-16 border-4 border-blue-400 border-t-transparent rounded-full animate-spin mb-4"></div>
-                <p className="text-blue-400 font-medium">Cargando cursos...</p>
+                <p className="text-blue-400 font-medium">Cargando productos...</p>
             </div>
         </div>
     )

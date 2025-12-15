@@ -20,14 +20,14 @@ const ProductDetail = () => {
       })
       .catch((error) => {
         console.error("Error!", error);
-        setError("Hubo un problema al cargar el detalle del curso.");
+        setError("Hubo un problema al cargar el producto.");
         setCargando(false);
       });
   }, [id]);
 
   if (error) return <p className="text-red-500 text-center py-12">{error}</p>;
   if (cargando) return <Spinner />;
-  if (!curso) return <p className="text-center py-12">Curso no encontrado.</p>;
+  if (!curso) return <p className="text-center py-12">Producto no encontrado.</p>;
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100 pt-24 pb-12 px-4">
@@ -38,12 +38,12 @@ const ProductDetail = () => {
           className="text-blue-400 hover:text-blue-300 mb-6 inline-flex items-center"
         >
           <ArrowLeft size={20} className="mr-2" />
-          Volver a cursos
+          Volver a productos
         </Link>
 
-        {/* Contenido del curso */}
+        
         <div className="bg-gray-800 rounded-lg overflow-hidden shadow-xl">
-          {/* Imagen del curso */}
+        
           <div className="w-full h-64 overflow-hidden">
             <img
               src={curso.imagen}

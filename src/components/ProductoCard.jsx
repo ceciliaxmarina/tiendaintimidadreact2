@@ -6,7 +6,7 @@ const ProductoCard = ({ producto }) => {
   const { agregarAlCarrito, user } = useAppContext();
 
   return (
-    <div className="card h-100 shadow-sm border" style={{ maxWidth: "200px", margin: "0 auto" }}>
+    <div className="card h-100 shadow-sm border" style={{  maxWidth: "200px",  margin: "0 auto" }}>
       <img
         src={producto.imagen}
         alt={producto.titulo}
