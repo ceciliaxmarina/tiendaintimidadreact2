@@ -1,0 +1,343 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* Variables de color */
+:root {
+  --bg-start: #e8c2c2;
+  --bg-end: #cc8b8b;
+  --text-primary: #1a1a1a;
+  --text-secondary: #2d2d2d;
+  --accent: #db2626;
+  --card-bg: #fdf9f5;
+  --white: #ffffff;
+}
+
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: 'Lora', serif;
+  background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Cards o secciones de contenido */
+.card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+/* Enlaces */
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  font-style: italic;
+}
+
+a:hover {
+  color: #8b2d2d;
+}
+
+/* Botones (si los usás) */
+.btn {
+  background: var(--accent);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1.2rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #8b2d2d;
+}
+
+/* Imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+/* Reseñas o citas */
+blockquote {
+  font-style: italic;
+  color: var(--text-secondary);
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* Footer o texto pequeño */
+small, .caption {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* --- Estilo del header alineado como en tiendaintimidad1.netlify.app --- */
+.tienda-header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+/* Logo (izquierda) */
+.tienda-header-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Navegación (derecha) */
+.tienda-header-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: auto; /* fuerza a la derecha si hay espacio extra */
+}
+
+.tienda-header-link {
+  font-family: 'Lora', serif;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  position: relative;
+  white-space: nowrap;
+}
+
+.tienda-header-link:hover {
+  color: var(--accent);
+}
+
+.tienda-header-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+
+.tienda-header-link:hover::after {
+  width: 100%;
+}
+
+/* Botón de carrito (si tiene badge) */
+.tienda-header-cart {
+  position: relative;
+}
+
+.tienda-header-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 0.7rem;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* Botón de cerrar sesión */
+.tienda-header-logout {
+  background: none;
+  border: none;
+  font-family: 'Lora', serif;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.tienda-header-logout:hover {
+  color: var(--accent);
+}
+
+/* --- Header estilo Tienda Intimidad (mínimo y fiel) --- */
+.tienda-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(253, 249, 245, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  z-index: 50;
+}
+
+.tienda-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.tienda-header-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tienda-header-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.tienda-header-link {
+  font-family: 'Lora', serif;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  position: relative;
+  white-space: nowrap;
+}
+
+.tienda-header-link:hover {
+  color: var(--accent);
+}
+
+.tienda-header-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+
+.tienda-header-link:hover::after {
+  width: 100%;
+}
+
+.tienda-header-cart {
+  position: relative;
+}
+
+.tienda-header-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 0.7rem;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  font-family: 'Lora', serif;
+}
+
+.tienda-header-logout {
+  background: none;
+  border: none;
+  font-family: 'Lora', serif;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0;
+}
+
+.tienda-header-logout:hover {
+  color: var(--accent);
+}
+
+/* --- Footer: degradado oscuro + texto más pequeño y claro --- */
+.tienda-footer {
+  background: linear-gradient(90deg, #9d174d, #7f1d36); /* rosa oscuro a rojo oscuro */
+  border-top: 1px solid #8b2d2d;
+  padding: 1rem 0;
+  color: #f1f5f9; /* gris muy claro, suave y legible */
+  font-family: 'Lora', serif;
+  font-size: 0.75rem; /* más pequeño */
+  line-height: 1.5;
+}
+
+.tienda-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.tienda-footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+@media (min-width: 768px) {
+  .tienda-footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.tienda-footer-left,
+.tienda-footer-right {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .tienda-footer-left { text-align: left; }
+  .tienda-footer-right { text-align: right; }
+}
+
+.tienda-footer-highlight {
+  font-weight: 600;
+  color: #fbcfe8; /* rosa claro suave, visible sobre fondo oscuro */
+}
