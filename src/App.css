@@ -342,6 +342,16 @@ small, .caption {
   color: #fbcfe8; /* rosa claro suave, visible sobre fondo oscuro */
 } 
 
+/* Ocultar el menú hamburguesa en pantallas grandes (por defecto) */
+.menu-toggle {
+  display: none;
+}
+
+/* 🔴 ESTO es lo que te faltaba: ocultar el menú en pantallas grandes */
+.menu-toggle {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .tienda-header-nav {
     display: none;
@@ -350,10 +360,10 @@ small, .caption {
 
     /* Fondo y posición */
     position: absolute;
-    top: 100%; /* justo debajo del header */
+    top: 100%;
     right: 0;
-    width: 200px; /* o el que quieras */
-    background-color: rgba(255, 255, 255, 0.95); /* fondo blanco semitransparente */
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.95);
     padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -364,6 +374,6 @@ small, .caption {
   }
 
   .menu-toggle {
-    display: block;
+    display: block; /* Solo en móviles */
   }
 }
