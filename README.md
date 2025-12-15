@@ -1,5 +1,13 @@
 # Tienda Intimidad React
 
+Usuarios de prueba:
+Usuario de prueba cliente: 
+User: admin@demo.com
+Pass: 1234
+Usuario de prueba administrador:
+User: admin
+Pass: admin1234
+
 Proyecto de tienda online desarrollado con **React** y **Vite**.  
 Permite mostrar productos, navegar entre componentes y gestionar el flujo básico de una tienda.
 
